@@ -1,0 +1,83 @@
+open redhat developer studio in virtual environment.
+Select next ----->
+-RED HATJBOSS EAP 7.0
+
+Server 
+locate file in browser
+select browse computer directory /opt/jbosseap 7.0
+
+ choose and click on okay button on the top right corner 
+
+Home directory
+/opt/jboss-eap7.0
+finish
+
+page no 160 guide exercize
+
+1. run the following command in the page 157 
+2. left top corner Applications -----> terminal
+and exectue that command in terminal.
+3. please make sure that the server stops running while doing the above process.
+4. 
+GO TO FILE MENU IMPORT ----> MAVEN ----> EXISTING MAVEN ---> Home ---->STUDENT--->JB183--->LAB---->persistent-entity
+5. Go with senarios
+ Convert a simple java person class to an entity class : 
+1.go to project src main.java ---> Person.java(never delete charecter in any file).
+2.add @Entity -javax.persistance.
+(Now plain java class converts into entity class)
+personentity class must implement serializable interface.)
+
+add entity annotation here ----------->
+4. Addserializable and add default version id from +box.
+----------------add annotation for primary key.
+5. Add @Id and @Generated Value(Strategy = Generationtype.Identity.
+6.//add @colomn (name = "name") annotation map to colomn.
+
+SAVE AND CLOSE PERSON.JAVA
+Next 2.3 implementation : 
+
+Open person service....... pg number 162
+
+Add @persistancecontext in PersonService.java
+line number 20 : @persistanceContext(unit name ="hello")
+
+private Entity Manager entityManager;
+3.4 in page number 162
+
+Line number 36 
+//call persist () method of enitity 
+entityManager.persist(P);
+
+Next 3.5 
+find name of person based on id
+//In PersonService,java
+line number 49 
+Public string getPerson(Long id)
+{
+return entityManager.find(person.class,id).getPersonName();
+}
+
+3.6 page number 162
+
+please save your changes
+
+4...
+TRAINING.UI package
+Hello.java----
+un comment two methods
+
+line 63
+to line 83
+
+un comment 86
+and save
+
+5 --- Deploy the application
+
+
+run as run on server
+
+
+
+
+
